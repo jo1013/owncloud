@@ -23,4 +23,13 @@ docker-compose up -d
 
 
 
+## local형 설치 key 등록
 
+wget -nv https://download.owncloud.org/download/repositories/production/Debian_9.0/Release.key -O - | sudo apt-key add -
+
+echo 'deb http://download.owncloud.org/download/repositories/production/Debian_9.0/ /' | sudo tee -a /etc/apt/sources.list.d/owncloud.list
+sudo apt update
+sudo apt install owncloud-complete-files
+
+--
+### @@출처@@ https://download.owncloud.org/download/repositories/production/owncloud/
